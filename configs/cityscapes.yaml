@@ -1,0 +1,33 @@
+#optimizer
+base_lr: 0.0005
+max_lr: 0.001  # maximum learning rate for cyclical adjustment
+step_size: 10000
+momentum: 0.9
+weight_decay: 0.0005
+optimizer: "SGD"
+
+clip_gradient: False
+max_norm: 20
+label_smoothing: False
+save_iter: 10000
+
+restore: False
+batch_size: 1
+input_size: [1024,2048]
+crop_size: [512,1024]
+max_epoch: 200
+num_classes: 19
+
+num_workers: 4
+use_tensorboard: False
+ignore_label: 255
+
+mean: [0.485, 0.456, 0.406]
+std: [0.229, 0.224, 0.225]
+
+#directory
+data_dir: "/home/disk1/duckie/dataset/Cityscapes"
+list_dir: "/home/disk1/duckie/Semantic-Segmentation/dataset/cityscapes_list"
+ckpt_dir: "/home/disk1/duckie/Semantic-Segmentation/checkpoint/Cityscapes/Deeplabv2-Resnet"
+result_dir: "/home/disk1/duckie/Semantic-Segmentation/visualization_result/Cityscapes"
+log_dir: "/home/disk1/duckie/Semantic-Segmentation/log/Cityscapes"
